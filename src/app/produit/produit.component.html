@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container">
+        <h2 id="titre"> BIENVENUE CHEZ DESIGN CORPORATION</h2>
+    </div>
+        <p style="text-align: center; font-family: 'Montserrat';">DESIGN CORPORATION, vous satisfaire est une priorité chez nous.</p>
+        <input type="text" class="form-control" placeholder="Ajouter une formation" id="incont" [(ngModel)]='listeTitle' (keyup.enter)='ajouterTitle()'><br>
+        <h3 class="formee">NOS FORMATIONS</h3>
+        <div class="container" *ngFor="let liste of listes" >
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <h4 ><span style="color:#e74c3c;"> formation : </span> {{ liste.title }} </h4>
+                <button type="button" class="close" aria-label="Close" (click)='suppliste(liste.id)'>
+                &times;
+                </button>
+                <h4><span style="color:#e74c3c; font-style: italic;"> coût : </span> {{ liste.prix }}</h4><hr style="background-color: #ff3838;">
+            </div>
+        </div>
+
+</div>
